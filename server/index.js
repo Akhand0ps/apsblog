@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsoptions = {
-  origin:"http://localhost:5173",
+  origin:["http://localhost:5173","https://apsblog.onrender.com"],
   methods:["GET","POST","PUT","DELETE"],
   credentials:true
 }
