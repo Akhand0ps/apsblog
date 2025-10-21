@@ -23,7 +23,7 @@ const corsoptions = {
 
 app.use(cors(corsoptions));
 
-app.get("/", () => {
+app.get("/", (req,res) => {
   res.json({ message: "Server is running" });
 });
 
