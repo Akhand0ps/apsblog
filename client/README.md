@@ -48,6 +48,14 @@ VITE_API_URL=http://localhost:5000
 - Build with `npm run build`
 - Preview locally with `npm run preview`
 - Ensure the backend serves the `/api/v1` routes with the same origin or configure CORS appropriately
+- For Vercel deployment, the `vercel.json` file ensures all routes fallback to `index.html` for client-side routing
+- Direct URL access (like `/blog/some-slug`) requires server-side rewrite rules to serve the SPA entry point
+
+## Vercel Configuration
+
+The `vercel.json` file configures the deployment to handle client-side routing properly. Without it, direct navigation to routes like `/blog/post-slug` would return 404 errors because Vercel tries to find physical files at those paths.
+
+The rewrite rule `"source": "/(.*)", "destination": "/index.html"` ensures all requests are served by the React app, which then handles routing internally via React Router.
 
 ## Contributing
 
