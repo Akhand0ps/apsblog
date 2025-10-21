@@ -5,7 +5,7 @@ export const authenticateAdmin = (req, res, next) => {
 
   const token = req.cookies.token; // read from cookie
 
-  console.log("Token from cookie:", token);
+  // console.log("Token from cookie:", token);
   
   if (!token) return res.status(401).json({ error: "Unauthorized" });
 
