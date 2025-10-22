@@ -1,6 +1,6 @@
 # APSBlog
 
-A full-stack blog application built with React and Node.js, featuring user authentication, blog management, and image upload capabilities.
+A full-stack personal blog application built with React and Node.js, featuring role based authentication, blog management, and image upload capabilities.
 
 ## Architecture
 
@@ -82,8 +82,8 @@ apsblog/
 ## API Endpoints
 
 ### Authentication
-- `POST /api/v1/auth/login` - User login
-- `GET /api/v1/auth/me` - Get current user profile
+- `POST /api/v1/auth/login` - for admin login
+- `GET /api/v1/auth/me` - Get admin profile
 
 ### Blog Management
 - `GET /api/v1/blog/blogs` - Get all blogs (with pagination)
